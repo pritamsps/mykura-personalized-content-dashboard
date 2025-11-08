@@ -24,7 +24,6 @@ interface NewsArticle {
     content: string | null;
 }
 
-// Define the shape of the data returned from the API
 interface NewsApiResponse {
     status: string;
     totalResults: number;
@@ -67,6 +66,7 @@ const NewsFeed = () => {
             </div>
         );
     }
+
     if (isSuccess && data?.articles) {
         const articlesToDisplay = data.articles.filter(
             (article: NewsArticle) => article.title && article.description
@@ -94,3 +94,4 @@ const NewsFeed = () => {
 };
 
 export default NewsFeed;
+

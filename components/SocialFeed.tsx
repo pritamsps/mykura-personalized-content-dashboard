@@ -77,7 +77,7 @@ const SocialFeed = () => {
         {filteredPosts.map((p: SocialPost) => (
           <div key={p.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden p-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div className="flex items-center mb-3">
-              <Image src={p.profilePic} alt={`${p.user}'s profile`} className="w-10 h-10 rounded-full mr-3" />
+              <Image src={p.profilePic} alt={`${p.user}'s profile`} width={50} height={50} className="w-10 h-10 rounded-full mr-3" />
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">{p.user}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">{new Date(p.timestamp).toLocaleString()}</p>
@@ -85,7 +85,7 @@ const SocialFeed = () => {
             </div>
             <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">{p.text}</p>
             {p.imageUrl && (
-              <Image src={p.imageUrl} alt="Social post content" className="w-full h-auto rounded-md mb-3" />
+              <Image src={p.imageUrl} alt="Social post content" width={400} height={200} className="w-full h-auto rounded-md mb-3" />
             )}
             <div className="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
               <span>Likes: {p.likes}</span>

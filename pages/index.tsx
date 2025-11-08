@@ -11,8 +11,8 @@ export default function Home() {
         <div className="mt-8 w-full max-w-lg px-4">
           <PreferencesPanel />
         </div>
-        <div className="mt-8 w-full max-w-4xl px-4">
-            <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Latest News for You</h2>
+        <div className="mt-12 w-full max-w-4xl px-4">
+            <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">News Articles</h2>
             <NewsFeed />
         </div>
         <div className="mt-12 w-full max-w-4xl px-4">
