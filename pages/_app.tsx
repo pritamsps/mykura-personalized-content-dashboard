@@ -6,11 +6,11 @@ import AppContent from '@/components/AppContent'
 import { ApiProvider } from '@reduxjs/toolkit/query/react';
 import { apiSlice } from '@/features/api/apiSlice';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <ApiProvider api={apiSlice}>
     <Provider store={store}>
-      <AppContent Component={Component} pageProps={pageProps} />
+      <AppContent Component={Component} pageProps={pageProps} router={router} />
     </Provider>
     </ApiProvider>
   );
